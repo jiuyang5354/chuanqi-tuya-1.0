@@ -9,7 +9,7 @@ npm install
 npm run dev
 ```
 
-浏览器打开 `http://localhost:3000`。根地址会自动进入正式作品集 `/synthesis`。
+浏览器打开 `http://localhost:3000`。根地址与 `/synthesis/` 都可直接访问正式作品集。
 
 ## 生产构建
 
@@ -22,6 +22,8 @@ npm run build
 
 构建会自动生成响应式 WebP，并补齐 Windows 上 Next 16.3.2 的预加载文件名。
 Cloudflare Pages 使用构建命令 `npm run build`、输出目录 `out`。
+不要用 `npx next build` 替代上述命令，否则会跳过图片预处理和静态导出修复。
+手动上传时，上传完整的 `out` 目录，包含 `_next`、`portfolio-assets` 和 `portfolio-optimized`；只上传源码或 HTML 会导致资源缺失。
 动效、性能改动与验证方法见 [验证记录](docs/motion-performance.md)。
 
 ## Netlify（既有配置）
