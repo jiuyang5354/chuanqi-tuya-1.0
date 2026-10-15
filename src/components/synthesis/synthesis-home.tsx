@@ -356,18 +356,6 @@ export function SynthesisHome() {
         </div>
       </section>
 
-      <section className="synthesis-contact" id="contact" aria-labelledby="synthesis-contact-title" data-home-reveal>
-        <div data-reveal-item>
-          <p>AVAILABLE FOR VISUAL DESIGN OPPORTUNITIES / 2026</p>
-          <h2 id="synthesis-contact-title">LET&apos;S MAKE<br />THE IDEA VISIBLE.</h2>
-          <h3>一起把想法做清楚。</h3>
-        </div>
-        <LiquidLink href="mailto:2742733283@qq.com" className="synthesis-contact__cta" data-reveal-item>START A CONVERSATION</LiquidLink>
-        <footer data-reveal-item>
-          <span>WEN YIFAN © 2026</span>
-          <TransitionLink href="/synthesis">BACK TO TOP ↑</TransitionLink>
-        </footer>
-      </section>
     </main>
   );
 }

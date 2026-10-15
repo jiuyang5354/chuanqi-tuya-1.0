@@ -15,6 +15,7 @@ import {
 import { PlantParticleHero } from "./plant-particle-hero";
 import { TransitionLink } from "./transition-link";
 import { InstrumentCursor } from "./instrument-cursor";
+import { FilmFooter } from "./film-footer";
 
 gsap.registerPlugin(useGSAP);
 
@@ -53,6 +54,7 @@ export function SynthesisShell({ children }: { children: React.ReactNode }) {
   const isHome = normalizedPath === "" || normalizedPath === "/" || normalizedPath === "/synthesis" || normalizedPath === "/synthesis/";
   const isAbout = normalizedPath === "/synthesis/about" || normalizedPath === "/synthesis/about/" || normalizedPath === "/about";
   const isLabRoute = normalizedPath.includes("/loader-lab") || normalizedPath.includes("/format-lab");
+  const hasPortfolioFooter = isHome || isAbout || normalizedPath.startsWith("/synthesis/projects/");
   const [loaded, setLoaded] = useState(isLabRoute);
   const [loaderPhase, setLoaderPhase] = useState(0);
   const [routePhase, setRoutePhase] = useState<RoutePhase>("idle");
@@ -505,7 +507,7 @@ export function SynthesisShell({ children }: { children: React.ReactNode }) {
   }, []);
 
   return (
-    <div className={`synthesis-site${loaded ? " is-loaded" : " is-loading"}`} aria-busy={!loaded || routePhase === "loading"}>
+    <div id="top" className={`synthesis-site${loaded ? " is-loaded" : " is-loading"}`} aria-busy={!loaded || routePhase === "loading"}>
       <InstrumentCursor />
       <a className="synthesis-skip" href="#content">Skip to content</a>
       {!isLabRoute && (
@@ -605,6 +607,7 @@ export function SynthesisShell({ children }: { children: React.ReactNode }) {
       )}
       <div className="synthesis-progress" aria-hidden="true"><i /></div>
       {children}
+      {hasPortfolioFooter && <FilmFooter isHome={isHome} />}
     </div>
   );
 }

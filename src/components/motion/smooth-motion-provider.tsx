@@ -139,7 +139,7 @@ export function SmoothMotionProvider({ children }: { children?: ReactNode }) {
   // 2. Scroll Reveal Observer (viewport fade-in entrance)
   useEffect(() => {
     const autoTargets = document.querySelectorAll<HTMLElement>(
-      "#content .synthesis-section-head, #content .synthesis-capabilities__grid article, #content .synthesis-about__copy, #content .synthesis-contact > div, #content .case-figure, #content .case-chapter > header, #content .case-motion > header, #content .case-closing"
+      "#content .synthesis-section-head, #content .synthesis-capabilities__grid article, #content .synthesis-about__copy, #content .case-figure, #content .case-chapter > header, #content .case-motion > header, #content .case-closing"
     );
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)");
     if (reduced.matches) return;

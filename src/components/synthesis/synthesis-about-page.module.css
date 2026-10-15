@@ -410,37 +410,6 @@
 .resumeRow > a:focus-visible { color: var(--color-paper); background: var(--color-black); }
 .resumeRow > a span:last-child { color: var(--color-signal); }
 
-.contact {
-  display: grid;
-  min-height: 92svh;
-  margin-inline: var(--syn-frame);
-  padding: 140px var(--syn-gutter) 42px;
-  border-inline: var(--rule-dark);
-  background: var(--color-black);
-}
-
-.contact > p { color: var(--color-muted-dark); font-size: var(--text-micro); letter-spacing: .12em; }
-.contact h2 {
-  align-self: center;
-  font-size: clamp(62px, 10.8vw, 170px);
-  font-weight: 250;
-  letter-spacing: -.08em;
-  line-height: .98;
-}
-
-.contact h2 em { color: var(--color-signal); font-family: Georgia, "Times New Roman", serif; font-weight: 400; }
-.contact footer {
-  align-self: end;
-  display: flex;
-  justify-content: space-between;
-  gap: var(--space-5);
-  padding-top: var(--space-4);
-  border-top: var(--rule-dark);
-  font-size: var(--text-micro);
-  letter-spacing: .1em;
-}
-
-.contact footer a { min-height: 44px; color: var(--color-signal); }
 
 @media (max-width: 800px) {
   .heroGrid { grid-template-columns: minmax(0, 1fr); padding: 106px var(--space-4) 42px; }
@@ -471,7 +440,6 @@
   .timeline li p { padding-bottom: var(--space-6); }
   .resumeRow { grid-template-columns: 1fr; gap: var(--space-6); }
   .resumeRow > a { justify-content: space-between; }
-  .contact footer { align-items: flex-start; flex-direction: column; }
 }
 
 @media (prefers-reduced-motion: reduce) {

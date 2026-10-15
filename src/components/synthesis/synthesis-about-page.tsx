@@ -203,11 +203,6 @@ export function SynthesisAboutPage() {
         </div>
       </section>
 
-      <section className={styles.contact} id="contact" aria-labelledby="contact-title">
-        <p>视觉 / 品牌 / 包装设计机会 · AVAILABLE FOR VISUAL / BRAND / PACKAGING OPPORTUNITIES</p>
-        <h2 id="contact-title">让想法<br /><em>BECOME VISIBLE.</em></h2>
-        <footer><span>ABOUT 关于 / WEN YIFAN 2026</span><a href="mailto:2742733283@qq.com">联系我 / 2742733283@QQ.COM ↗</a></footer>
-      </section>
     </main>
   );
 }
