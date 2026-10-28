@@ -1,3 +1,5 @@
+**中文** | [English](README.en.md)
+
 # Wen Yifan Portfolio
 
 温一帆的视觉设计作品集，聚焦品牌设计、包装设计、三维影像与交互体验。
